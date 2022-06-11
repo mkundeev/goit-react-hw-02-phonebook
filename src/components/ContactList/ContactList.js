@@ -11,7 +11,7 @@ function ContactList({ contacts, deletContact }) {
         {contacts.map(({ name, number, id }) => (<li key={id} className={s.item}>
             <ContactItem name={name} number={number} deletContact={deletContact} id={id} />
         </li>))}
-        {contacts.length===0 && <Notification message={'No contacts in your phonebook'} />}
+        {contacts.length===0 && <Notification message={'No contacts found'} />}
     </ul>     
     )
 }

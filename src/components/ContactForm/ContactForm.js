@@ -1,20 +1,16 @@
 import React from "react";
-import PropTypes from 'prop-types';
-
 import s from './ContactForm.module.css'
 
 class ContactForm extends React.Component{
 state = {
     name: '',
     number:'',
-}
-    
+} 
     handleChange = e => {
         const { name, value } = e.currentTarget;
         this.setState({[name]: value})
 
-    }
-    
+    }  
     onSubmit = e => {
         e.preventDefault();
         this.props.onSubmit(this.state)
@@ -26,7 +22,6 @@ state = {
         number:'',
          })
     }
-
     render() {
         return (
             <form className={s.form} onSubmit={this.onSubmit}>

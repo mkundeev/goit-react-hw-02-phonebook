@@ -38,13 +38,13 @@ class App extends React.Component{
   render() { 
     const normilizeFilter = this.state.filter.toLowerCase()
     const filterContacts = this.state.contacts.filter(contact=>contact.name.toLowerCase().includes(normilizeFilter))
-
+    const {filter}=this.state
     return (<div className="section">
       <h1>Phonebook</h1>
       <ContactForm onSubmit={this.formSubmit} />
 
       <h2>Contacts</h2>
-      <Filter value={this.state.filter} onChange={this.changeFilter} />
+      <Filter value={filter} onChange={this.changeFilter} />
       <ContactList contacts={filterContacts} deletContact={this.deletContact} />
       
     </div>)
