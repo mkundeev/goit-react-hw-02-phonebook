@@ -3,6 +3,10 @@
     padding: 20px;
     width: 300px;
     border-radius: 4px;
+    display: flex;
+        flex-direction: column;
+        gap: 10px;
+    
 }
 .item{
     display: flex;
@@ -18,4 +22,10 @@
 }
 .button{
     padding: 5px;
+}
+.error{
+    padding: 5px;
+    border: 1px solid #000;
+    background-color: #fff;
+    max-width: 100%;
 }
