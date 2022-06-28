@@ -18,11 +18,11 @@ class App extends React.Component{
   filter: ''
 }
   formSubmit = data => {
-    data.id = nanoid()
     if (this.state.contacts.some(({ name }) => name === data.name)) {
       alert(`${data.name} is already in contacts`)
       return
     }
+    data.id = nanoid()
     this.setState({ contacts: [...this.state.contacts, data] })
     
   }
